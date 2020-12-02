@@ -1,4 +1,5 @@
 import DS from 'ember-data';
+import { alias } from '@ember/object/computed';
 
 const { Model, attr, hasMany } = DS;
 
@@ -9,6 +10,8 @@ export default Model.extend({
   coverImage: attr('string'),
   createdAt: attr('date'),
 
-  songs: hasMany('song')
+  songs: hasMany('song'),
+
+  totalSongs: alias('songs.length')
 
 });
