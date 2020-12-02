@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto:wght@100;400;500&display=swap');
+
+$app-font-color: rgba(#000,.85);
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  max-width: 100%;
+  color: $app-font-color;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1080px;
+
+}
+.header {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  margin-bottom: 10px
+}
+
+@import 'components/index';
