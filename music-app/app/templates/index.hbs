@@ -1,10 +1,7 @@
+
+<div class="header">Albums</div>
+
+<div class="search"><input type="text" placeholder="Search Albums" name="searchStr" value={{this.searchStr}} onkeyup={{perform updateDebouncedProperty value="target.value"}}></div>
+
+<MusicList @albums={{this.filteredAlbums}}/>
 {{outlet}}
-
-<div class="wrapper">
-
-  <div class="header">Albums</div>
-
-  <div class="search"><input type="text" placeholder="Search Albums" name="searchStr" value={{this.searchStr}} onkeyup={{perform updateDebouncedProperty value="target.value"}}></div>
-
-  <MusicList @albums={{this.filteredAlbums}}/>
-</div>

@@ -1,12 +1,5 @@
 {{#each this.albums as |album|}}
-  <div class="music-album">
-    <div class="cover">
-      <img src={{album.coverImage}} width="250" alt={{album.name}}>
-    </div>
-    <div class="info">
-      <span class="name">{{album.name}}</span> <span class="delim">&centerdot;</span> {{moment-format album.createdAt "YYYY"}} <span class="delim">&centerdot;</span> {{pluralize album.totalSongs "song"}}
-    </div>
-  </div>
+  <MusicAlbum @album={{album}}/>
 {{else}}
   <div>No albums found</div>
 {{/each}}

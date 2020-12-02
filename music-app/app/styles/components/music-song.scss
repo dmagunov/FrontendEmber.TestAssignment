@@ -1,0 +1,14 @@
+.music-song {
+  display: flex;
+  flex-direction: row;
+  font-size: 13px;
+  padding: 10px 5px;
+  width: fit-content;
+  border-bottom: 1px dashed lighten($app-font-color, 80%);
+  > div {
+    margin-right: 20px;
+  }
+  .duration {
+    color: lighten($app-font-color, 40%);
+  }
+}

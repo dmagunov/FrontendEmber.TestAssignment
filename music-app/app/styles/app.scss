@@ -8,6 +8,11 @@ html, body {
   max-width: 100%;
 }
 
+a {
+  color: #1a73E8;
+  text-decoration: none;
+}
+
 .wrapper {
   margin: 0 auto;
   max-width: 1080px;
@@ -18,7 +23,12 @@ html, body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
   font-size: 22px;
-  margin-bottom: 20px
+  margin-bottom: 20px;
+  &.medium {
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
 }
 
 .search {
@@ -35,5 +45,26 @@ html, body {
     width: 100%;
   }
 }
+
+// helpers
+.d-f {
+  display: flex;
+}
+.fd-c {
+  flex-direction: column;
+}
+.fd-r {
+  flex-direction: row;
+}
+.ai-c {
+  align-items: center;
+}
+.mr-5 {
+  margin-right: 20px;
+}
+.mb-5 {
+  margin-bottom: 20px;
+}
+
 
 @import 'components/index';
