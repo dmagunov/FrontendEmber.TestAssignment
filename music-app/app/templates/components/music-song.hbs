@@ -1,13 +1,13 @@
 <div class="name">
   {{#if isEdit}}
-    {{input value=this.song.name}}
+    {{input placeholder="song name" value=this.song.name}}
   {{else}}
     {{this.song.name}}
   {{/if}}
 </div>
 <div class="duration">
   {{#if isEdit}}
-    {{input value=this.song.duration}}
+    {{input placeholder="duration" value=this.song.duration}}
   {{else}}
     {{format-time this.song.duration}}
   {{/if}}
