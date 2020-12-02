@@ -1,0 +1,21 @@
+.music-album {
+  .cover {
+    img {
+      border-radius: 5px;
+      box-shadow: 1px 3px 2px 0px rgba(0, 0, 0, 0.15);
+    }
+    margin-bottom: 10px;
+  }
+  .info {
+    color: lighten($app-font-color, 10%);
+    .name {
+      font-weight: 500;
+      font-size: 17px;
+      color: $app-font-color;
+    }
+    .delim {
+      font-size: 17px;
+      font-weight: bold;
+    }
+  }
+}

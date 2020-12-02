@@ -1,0 +1,35 @@
+{{outlet}}
+
+{{#link-to "index"}}&laquo; Back{{/link-to}}
+
+<MusicAlbum @class="mb-5" @album={{this.model}} as |album|>
+  <div class="header">{{album.name}}</div>
+  <div class="d-f fd-r ai-c">
+    <div class="cover mr-5">
+      <img src={{album.coverImage}} width="250" alt={{album.name}}>
+    </div>
+    <div class="info">
+      <div>
+        <span class="name">{{album.name}}</span>
+      </div>
+      <div>
+        {{album.releaseYear}} <span class="delim">&centerdot;</span> {{album.totalSongs}}
+      </div>
+    </div>
+  </div>
+</MusicAlbum>
+
+<div class="header medium">Songs</div>
+{{#if (await this.model.songs)}}
+  <div class="mb-5">
+    {{#each (await this.model.songs) as |song|}}
+      <MusicSong @song={{song}} @onSave={{action "saveSong"}}/>
+    {{/each}}
+  </div>
+{{else}}
+  <p>No songs for this Album</p>
+{{/if}}
+
+<div>
+  <a href="javascript:void(0)" {{action "addSong"}}>+ Add Song</a>
+</div>

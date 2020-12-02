@@ -1,0 +1,9 @@
+.music-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  .music-album, .header {
+    margin: 10px;
+  }
+}

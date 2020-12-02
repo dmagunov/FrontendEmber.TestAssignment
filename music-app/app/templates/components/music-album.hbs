@@ -1,0 +1,15 @@
+{{#if hasBlock}}
+  {{yield (hash
+    name=this.album.name
+    coverImage=this.album.coverImage
+    releaseYear=(moment-format this.album.createdAt "YYYY")
+    totalSongs=(pluralize this.album.totalSongs "song")
+  )}}
+{{else}}
+  <div class="cover">
+    {{#link-to "album" this.album.id}}<img src={{this.album.coverImage}} width="250" alt={{this.album.name}}>{{/link-to}}
+  </div>
+  <div class="info">
+    <span class="name">{{this.album.name}}</span> <span class="delim">&centerdot;</span> {{moment-format this.album.createdAt "YYYY"}} <span class="delim">&centerdot;</span> {{pluralize this.album.totalSongs "song"}}
+  </div>
+{{/if}}

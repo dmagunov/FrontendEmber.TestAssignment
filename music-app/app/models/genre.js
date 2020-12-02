@@ -1,5 +1,10 @@
-import Model from '@ember-data/model';
+import DS from 'ember-data';
+
+const { Model, attr, hasMany } = DS;
 
 export default Model.extend({
+
+  name: attr('string'),
+  songs: hasMany('song')
 
 });
