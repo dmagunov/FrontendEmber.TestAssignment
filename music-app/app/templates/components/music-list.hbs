@@ -1,5 +1,5 @@
 {{#each this.albums as |album|}}
-  <MusicAlbum @album={{album}}/>
+  <MusicAlbum data-test-component-for="music-album" @album={{album}}/>
 {{else}}
   <div>No albums found</div>
 {{/each}}
