@@ -22,7 +22,7 @@
 <div class="header medium">Songs</div>
 {{#if (await this.model.songs)}}
   {{#each (await this.model.songs) as |song|}}
-    <MusicSong @song={{song}}/>
+    <MusicSong @song={{song}} @onSave={{action "saveSong"}}/>
   {{/each}}
 {{else}}
   <p>No songs for this Album</p>

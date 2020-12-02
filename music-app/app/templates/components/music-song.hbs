@@ -1,2 +1,16 @@
-<div class="name">{{this.song.name}}</div>
+<div class="name">
+  {{#if isEdit}}
+    {{input value=this.song.name}}
+  {{else}}
+    {{this.song.name}}
+  {{/if}}
+</div>
 <div class="duration">{{format-time this.song.duration}}</div>
+<div class="actions">
+  {{#if isEdit}}
+    <button onClick={{pipe-action (action this.onSave this.song) (action "toggleEdit")}}>Save</button>
+    <a href="javascript:void(0)" {{action "toggleEdit"}}>Cancel</a>
+  {{else}}
+    <a href="javascript:void(0)" {{action "toggleEdit"}}>Edit</a>
+  {{/if}}
+</div>

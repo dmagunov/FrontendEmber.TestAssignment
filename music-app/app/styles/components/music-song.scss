@@ -1,5 +1,6 @@
 .music-song {
   display: flex;
+  align-items: center;
   flex-direction: row;
   font-size: 13px;
   padding: 10px 5px;
@@ -10,5 +11,11 @@
   }
   .duration {
     color: lighten($app-font-color, 40%);
+  }
+  input {
+    border: 1px solid lighten($app-font-color, 80%);
+    border-radius: 5px;
+    outline: none;
+    padding: 3px 5px;
   }
 }
