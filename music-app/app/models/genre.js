@@ -1,10 +1,10 @@
-import Model from '@ember-data/model';
-import { attr, hasMany } from '@ember-decorators/data';
+import DS from 'ember-data';
 
-export default class Genre extends Model {
+const { Model, attr, hasMany } = DS;
 
-  @attr('string') name;
+export default Model.extend({
 
-  @hasMany songs;
+  name: attr('string'),
+  songs: hasMany('song')
 
-}
+});

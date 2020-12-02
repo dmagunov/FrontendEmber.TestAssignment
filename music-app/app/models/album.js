@@ -1,12 +1,14 @@
-import Model from '@ember-data/model';
-import { attr, hasMany } from '@ember-decorators/data';
+import DS from 'ember-data';
 
-export default class Album extends Model {
+const { Model, attr, hasMany } = DS;
 
-  @attr('string') name;
-  @attr('date') createdAt;
-  @attr('string') coverImage;
-  @attr('string') description;
+export default Model.extend({
 
-  @hasMany songs;
-}
+  name: attr('string'),
+  description: attr('string'),
+  coverImage: attr('string'),
+  createdAt: attr('date'),
+
+  songs: hasMany('song')
+
+});

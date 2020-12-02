@@ -1,14 +1,15 @@
-import Model from '@ember-data/model';
-import { attr, belongsTo, hasMany } from '@ember-decorators/data';
+import DS from 'ember-data';
 
-export default class Song extends Model {
+const { Model, attr, hasMany, belongsTo } = DS;
 
-  @attr('string') name;
-  @attr('date') createdAt;
-  @attr('number') duration;
+export default Model.extend({
 
-  @belongsTo genre;
-  @belongsTo album;
-  @hasMany artists;
+  name: attr('string'),
+  createdAt: attr('date'),
+  duration: attr('number'),
 
-}
+  genre: belongsTo('genre'),
+  album: belongsTo('album'),
+  artists: hasMany('artist')
+
+});
