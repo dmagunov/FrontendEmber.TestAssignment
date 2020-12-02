@@ -1,0 +1,6 @@
+<div class="cover">
+  <img src={{this.album.coverImage}} width="250" alt={{this.album.name}}>
+</div>
+<div class="info">
+  <span class="name">{{this.album.name}}</span> <span class="delim">&centerdot;</span> {{moment-format this.album.createdAt "YYYY"}} <span class="delim">&centerdot;</span> {{pluralize this.album.totalSongs "song"}}
+</div>
