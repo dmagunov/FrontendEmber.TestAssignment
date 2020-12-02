@@ -12,7 +12,7 @@ export default Factory.extend({
   },
 
   duration() {
-    return faker.random.number();
+    return Math.floor(Math.random() * 180) + 30  ;
   },
 
   afterCreate(song, server) {
