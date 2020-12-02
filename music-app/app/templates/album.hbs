@@ -21,9 +21,15 @@
 
 <div class="header medium">Songs</div>
 {{#if (await this.model.songs)}}
-  {{#each (await this.model.songs) as |song|}}
-    <MusicSong @song={{song}} @onSave={{action "saveSong"}}/>
-  {{/each}}
+  <div class="mb-5">
+    {{#each (await this.model.songs) as |song|}}
+      <MusicSong @song={{song}} @onSave={{action "saveSong"}}/>
+    {{/each}}
+  </div>
 {{else}}
   <p>No songs for this Album</p>
 {{/if}}
+
+<div>
+  <a href="javascript:void(0)" {{action "addSong"}}>+ Add Song</a>
+</div>
