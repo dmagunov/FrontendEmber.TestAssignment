@@ -7,4 +7,6 @@ export default class IndexRoute extends Route {
       include: 'songs'
     });
   }
+
+
 }

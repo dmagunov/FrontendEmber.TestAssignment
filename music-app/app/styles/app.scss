@@ -4,20 +4,36 @@ $app-font-color: rgba(#000,.85);
 
 html, body {
   font-family: 'Roboto', sans-serif;
-  max-width: 100%;
   color: $app-font-color;
+  max-width: 100%;
 }
 
 .wrapper {
   margin: 0 auto;
   max-width: 1080px;
-
+  padding-top: 40px;
 }
+
 .header {
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
   font-size: 22px;
-  margin-bottom: 10px
+  margin-bottom: 20px
+}
+
+.search {
+  margin-right: 40px;
+  margin-bottom: 20px;
+
+  input {
+    font-size: 17px;
+    font-weight: 400;
+    border: 1px solid lighten($app-font-color, 80%);
+    border-radius: 5px;
+    outline: none;
+    padding: 7px 10px;
+    width: 100%;
+  }
 }
 
 @import 'components/index';
