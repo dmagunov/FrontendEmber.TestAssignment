@@ -8,11 +8,11 @@ export default Factory.extend({
   },
 
   createdAt() {
-    return faker.date.past().toLocaleDateString();
+    return faker.date.past();
   },
 
   coverImage() {
-    return faker.image.imageUrl();
+    return faker.image.image();
   },
 
   description() {
